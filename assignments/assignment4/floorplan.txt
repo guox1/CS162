@@ -1,0 +1,4 @@
+f f f o
+f f f o
+o o f f
+f f f f

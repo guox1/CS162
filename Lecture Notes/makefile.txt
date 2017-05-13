@@ -1,0 +1,4 @@
+all:
+	g++ -g vector.hpp main.cpp -o out
+clean:
+	rm -f out vector.hpp.gch

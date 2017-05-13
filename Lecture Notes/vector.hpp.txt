@@ -1,0 +1,20 @@
+#include<cstdlib>
+
+
+template <typename T> //Allows us to use this Template in the entire class
+class vector {
+   private:
+      T *v;
+      int size;
+      int capacity;
+   public:
+      vector();          //Default constructor
+      vector(int);       //Expicit constructor with predefined length
+      ~vector();         //Destructor
+      void pushback(T);
+      T at(int);
+      int getSize();
+};
+
+#include "vector.cpp"
+

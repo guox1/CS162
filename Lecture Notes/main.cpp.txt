@@ -1,0 +1,32 @@
+#include"vector.hpp"
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    vector<int> array;
+    
+    array.pushback('a');
+    array.pushback('b');
+    array.pushback('A');
+    array.pushback('B');
+    
+    
+    for(int i=0; i < array.getSize(); i++)
+        cout << array.at(i) << endl;
+
+
+    vector<char> array_chars;
+    
+    array_chars.pushback('a');
+    array_chars.pushback('b');
+    array_chars.pushback('A');
+    array_chars.pushback('B');
+    
+    
+    for(int i=0; i < array_chars.getSize(); i++)
+        cout << array_chars.at(i) << endl;
+
+}

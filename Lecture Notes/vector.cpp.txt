@@ -1,0 +1,66 @@
+#include<cstdlib>
+// Note that the .h is not included, as this file is instead included in the 
+// hpp file.
+//
+
+
+template <typename T>
+vector<T>::vector()
+{
+    v = new T[5]; //Gives an initial length of 5 elements
+    size = 0;
+    capacity = 5; 
+    
+}
+
+template <typename T>
+vector<T>::vector(int length)
+{
+    v = new T[length]; //Gives an initial length of 5 elements
+    size = 0;
+    capacity = 5; 
+} 
+
+template <typename T>
+vector<T>::~vector()
+{
+    if(v != NULL)
+        delete [] v;
+    v = NULL;
+}
+
+
+template <typename T>
+void vector<T>::pushback(T element)
+{
+    //Error Check
+    //Exceeding the end of the array
+    // If so, resize!
+    if(size >= capacity)
+    {
+        //Resize
+    }
+    v[size] = element;
+    size++; 
+}
+
+
+template <typename T>
+T vector<T>::at(int index)
+{
+    if(index >= size)
+    {
+        if(index < 0)
+        {}//throw exception with index, size, capacity
+    }
+
+    return v[index];
+    
+}
+
+
+template <typename T>
+int vector<T>::getSize()
+{
+    return size;
+}
